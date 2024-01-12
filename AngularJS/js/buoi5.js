@@ -12,9 +12,24 @@ let myApp = angular.module('myApp', []);
 
 myApp.controller('employeeController', function ($scope) {
     $scope.title = "Danh sách nhân viên";
+    $scope.orderBy = 'hoTen';
+    $scope.limitTo = '4';
+    $scope.filter = '';
     $scope.employees = [
         {
             hoTen: "Nguyễn Văn A",
+            ngaySinh: new Date("2004-11-20"),
+            luong: 100000000,
+            gioiTinh: 0,
+        },
+        {
+            hoTen: "Nguyễn Văn B",
+            ngaySinh: new Date("2004-11-20"),
+            luong: 100000000,
+            gioiTinh: 0,
+        },
+        {
+            hoTen: "Nguyễn Văn C",
             ngaySinh: new Date("2004-11-20"),
             luong: 100000000,
             gioiTinh: 0,
