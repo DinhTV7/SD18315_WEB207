@@ -53,5 +53,12 @@ myApp.controller('employeeController', function ($scope) {
     $scope.myFunc = function () {
         console.log("Mãi bên nhau bạn nhé");
     }
+
+    // Khi click và tên của nhân viên thì hiển thị thông báo
+    // Xin chào + tên nhân viên
+
+    // Khi hover vào ngày sinh
+    // Nếu tuổi < 18 thì hiển thị "Chưa đủ tuổi đi tù"
+    // Nếu tuổi >= 18 thì hiển thị "Đã đủ tuổi đi tù"
 });
 
