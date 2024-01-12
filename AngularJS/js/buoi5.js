@@ -44,5 +44,14 @@ myApp.controller('employeeController', function ($scope) {
 
     // Làm việc với ng-model
     $scope.xinchao = "Chào mừng các bạn";
+
+    // Khai báo hàm
+    $scope.sayHello = function(name) {
+        alert("Xin chào " + name);
+    }
+
+    $scope.myFunc = function () {
+        console.log("Mãi bên nhau bạn nhé");
+    }
 });
 
