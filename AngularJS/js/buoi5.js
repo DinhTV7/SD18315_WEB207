@@ -5,8 +5,7 @@
 // Sử dụng AngularJS để hiển thị toàn bộ
 // dữ liệu của nhanVien ra view dưới dạng table
 // table có sử dụng Bootstrap
-// "20/11/2004"
-// new Date("năm-tháng-ngày")
+// ngày sinh phải khai báo dữ liệu bằng new Date("năm-tháng-ngày")
 
 let myApp = angular.module('myApp', []);
 
