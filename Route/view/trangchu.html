@@ -27,4 +27,17 @@
             <td>@twitter</td>
         </tr>
     </tbody>
+
+    <!-- ng-submit sẽ sử dụng để gửi dữ liệu trong form -->
 </table>
+<form ng-submit="tinhTong()">
+    Number 1:
+    <input type="text" ng-model="inputValue.number1">
+    Number 2:
+    <input type="text" ng-model="inputValue.number2">
+    <button type="submit" class="btn btn-primary">Gửi dữ liệu</button>
+</form>
+<!-- ng-if: Tồn tại hay không tồn tại -->
+<h5 ng-if="ketqua">Kết quả là: {{ ketqua }}</h5>
+<!-- ng-show: Hiển thị hay không hiển thị -->
+<h5 ng-show="ketqua">Kết quả là: {{ ketqua }}</h5>

@@ -14,9 +14,10 @@ myApp.config(function ($routeProvider) {
             }
         )
         .when(
-            '/gioi-thieu', // Tên route
+            '/gioi-thieu/:id/:name/:des', // Tên route
             {
                 templateUrl: 'view/gioithieu.html', // Đường dẫn đến view
+                controller: GioiThieuController
             }
         )
         .otherwise({
