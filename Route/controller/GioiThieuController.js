@@ -13,4 +13,25 @@ window.GioiThieuController = function ($scope, $routeParams) {
     // hiển thị alert (Chào mừng + tên đăng nhập)
     // nếu nhâp sai thì hiển thị thông báo đỏ 
     // bên dưới ô input
+    $scope.dangNhap = function () {
+        let tenDangNhap = $scope.inputValue.tenDangNhap;
+        let matKhau = $scope.inputValue.matKhau;
+        $scope.error = {};
+
+        if (tenDangNhap == "DinhTV7") {
+            $scope.error.tenDangNhap = "";
+        } else {
+            $scope.error.tenDangNhap = "Sai tên đăng nhập";
+        }
+
+        if (matKhau == "12345678") {
+            $scope.error.matKhau = "";
+        } else {
+            $scope.error.matKhau = "Sai mật khẩu";
+        }
+
+        if (tenDangNhap == "DinhTV7" && matKhau == "12345678") {
+            alert("Xin chào " + tenDangNhap);
+        }
+    }
 }

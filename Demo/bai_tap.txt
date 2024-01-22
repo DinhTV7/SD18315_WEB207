@@ -1,0 +1,2 @@
+Xây dựng 1 trang web có 4 router list, add, edit, delete
+Mỗi router sẽ map tới 1 file html và controller khác nhau 
