@@ -3,8 +3,10 @@
     <label for="" class="form-label">Tên đăng nhập:</label>
     <input type="text" class="form-control" ng-model="inputValue.tenDangNhap">
     <p ng-if="error.tenDangNhap" class="text-danger">{{error.tenDangNhap}}</p>
+
     <label for="" class="form-label">Mật khẩu:</label>
     <input type="text" class="form-control" ng-model="inputValue.matKhau">
     <p ng-if="error.matKhau" class="text-danger">{{error.matKhau}}</p>
+    
     <button type="submit" class="btn btn-success mt-3">Đăng nhập</button>
 </form>
