@@ -5,12 +5,6 @@
             "hoTen": "json-server",
             "email": "json-server",
             "ngaySinh": "typicode"
-        },
-        {
-            "id": 2,
-            "hoTen": "json-server 22222",
-            "email": "json-server 2",
-            "ngaySinh": "typicode 2"
         }
     ]
 }

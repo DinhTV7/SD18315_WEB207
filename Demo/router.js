@@ -8,6 +8,13 @@ myApp.config(function ($routeProvider) {
                 controller: ListStudentController
             }
         )
+        .when(
+            '/add-student',
+            {
+                templateUrl: 'view/addstudent.html',
+                controller: AddStudentController
+            }
+        )
         .otherwise(
             {
                 redirectTo: '/list-student'
