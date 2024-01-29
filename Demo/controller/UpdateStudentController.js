@@ -19,23 +19,56 @@ window.UpdateStudentController = function ($scope, $http, $routeParams, $locatio
     });
 
     $scope.updateStudent = function () {
-        let updateStudent = {
-            hoTen: $scope.inputValue.hoTen,
-            email: $scope.inputValue.email,
-            ngaySinh: $scope.inputValue.ngaySinh,
+        // Tạo 1 biến để kiểm tra
+        let flag = true;
+
+        // Tạo biến để bật tắt lỗi
+        $scope.kiemTra = {
+            hoTen: false,
+            email: false,
+            ngaySinh: false
         }
 
-        // console.log(updateStudent);
+        // Check trống
+        if (!$scope.inputValue || !$scope.inputValue.hoTen) {
+            flag = false;
+            $scope.kiemTra.hoTen = true;
+        }
+        if (!$scope.inputValue || !$scope.inputValue.email) {
+            flag = false;
+            $scope.kiemTra.email = true;
+        }
+        if (!$scope.inputValue || !$scope.inputValue.ngaySinh) {
+            flag = false;
+            $scope.kiemTra.ngaySinh = true;
+        }
 
-        $http.put(
-            `${apiStudent}/${studentID}`,
-            updateStudent
-        ).then(function (response) {
-            // console.log(response);
-            if (response.status == 200) {
-                alert("Chỉnh sửa thành công");
-                $location.path('/list-student');
+        // Check email
+        let regexEmail = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+        if (!regexEmail.test($scope.inputValue.email)) {
+            flag = false;
+            $scope.kiemTra.email = true;
+        }
+        
+        if (flag) {
+            let updateStudent = {
+                hoTen: $scope.inputValue.hoTen,
+                email: $scope.inputValue.email,
+                ngaySinh: $scope.inputValue.ngaySinh,
             }
-        });
+
+            // console.log(updateStudent);
+
+            $http.put(
+                `${apiStudent}/${studentID}`,
+                updateStudent
+            ).then(function (response) {
+                // console.log(response);
+                if (response.status == 200) {
+                    alert("Chỉnh sửa thành công");
+                    $location.path('/list-student');
+                }
+            });
+        }
     }
 }
