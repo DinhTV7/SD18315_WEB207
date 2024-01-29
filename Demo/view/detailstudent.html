@@ -1,0 +1,19 @@
+<div class="card my-3">
+    <h5 class="card-header">{{ title }}</h5>
+    <div class="card-body">
+        <form>
+            <label for="" class="form-label">Họ tên:</label>
+            <input type="text" class="form-control" ng-model="inputValue.hoTen" disabled>
+
+            <label for="" class="form-label">Email:</label>
+            <input type="text" class="form-control" ng-model="inputValue.email" disabled>
+
+            <label for="" class="form-label">Ngày sinh:</label>
+            <input type="date" class="form-control" ng-model="inputValue.ngaySinh" disabled>
+
+            <a href="#!/update-student/{{inputValue.id}}">
+                <button type="submit" class="btn btn-primary mt-3">Chỉnh sửa</button>
+            </a>
+        </form>
+    </div>
+</div>

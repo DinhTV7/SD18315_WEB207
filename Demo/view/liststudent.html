@@ -21,7 +21,9 @@
                     <td>{{ item.email }}</td>
                     <td>{{ item.ngaySinh | date: 'dd/MM/yyyy' }}</td>
                     <td>
-                        <button class="btn btn-warning">Sửa</button>
+                        <a href="#!/detail-student/{{item.id}}">
+                            <button class="btn btn-warning">Chi tiết</button>
+                        </a>
                         <button class="btn btn-danger">Xóa</button>
                     </td>
                 </tr>
