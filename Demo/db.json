@@ -1,10 +1,16 @@
 {
-    "student": [
-        {
-            "id": 1,
-            "hoTen": "json-server",
-            "email": "json-server",
-            "ngaySinh": "typicode"
-        }
-    ]
+  "student": [
+    {
+      "hoTen": "ádasd22222222222",
+      "email": "dinh22222222222222222222@gmail.com",
+      "ngaySinh": "2024-01-27T17:00:00.000Z",
+      "id": "a575"
+    },
+    {
+      "hoTen": "Đinh 22222333444",
+      "email": "dinhtv7@gmail.com",
+      "ngaySinh": "2024-01-26T17:00:00.000Z",
+      "id": "70f2"
+    }
+  ]
 }

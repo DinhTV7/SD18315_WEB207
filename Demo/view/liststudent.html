@@ -24,7 +24,7 @@
                         <a href="#!/detail-student/{{item.id}}">
                             <button class="btn btn-warning">Chi tiết</button>
                         </a>
-                        <button class="btn btn-danger">Xóa</button>
+                        <button ng-click="deleteStudent(item.id)" class="btn btn-danger">Xóa</button>
                     </td>
                 </tr>
             </tbody>

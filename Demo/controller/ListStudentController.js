@@ -15,4 +15,17 @@ window.ListStudentController = function ($scope, $http) {
             $scope.listStudent = response.data;
         }
     })
+
+    $scope.deleteStudent = function (deleteID) {
+        let confirm = window.confirm("Bạn có muốn xóa không?");
+        if (confirm) {
+            $http.delete(
+                `${apiStudent}/${deleteID}`
+            ).then(function (response) {
+                if (response.status == 200) {
+                    alert("Xóa dữ liệu thành công");
+                }
+            });
+        }
+    }
 }
