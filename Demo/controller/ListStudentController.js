@@ -17,7 +17,7 @@ window.ListStudentController = function ($scope, $http) {
     })
 
     $scope.deleteStudent = function (deleteID) {
-        let confirm = window.confirm("Bạn có muốn xóa không?");
+        let confirm = window.confirm("Bạn có muốn xóa không ?");
         if (confirm) {
             $http.delete(
                 `${apiStudent}/${deleteID}`
